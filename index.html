@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wonderful Homepage</title>
+    <title>UCU Code Challenge - Uganda Christian University</title>
     <style>
         /* Reset and Base Styles */
         
@@ -134,25 +134,42 @@
             margin: 0 auto;
         }
         
-        .features {
+        .intro {
             background: #f8f9fa;
+            text-align: center;
         }
         
-        .features h2 {
+        .intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .challenges {
+            background: white;
+        }
+        
+        .challenges h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: #333;
         }
         
-        .feature-grid {
+        .challenge-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         
-        .feature-card {
-            background: white;
+        .challenge-card {
+            background: #f8f9fa;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -160,19 +177,24 @@
             transition: transform 0.3s ease;
         }
         
-        .feature-card:hover {
+        .challenge-card:hover {
             transform: translateY(-10px);
         }
         
-        .feature-card i {
+        .challenge-card i {
             font-size: 3rem;
             color: #4A90E2;
             margin-bottom: 1rem;
         }
         
-        .feature-card h3 {
+        .challenge-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
+        }
+        
+        .challenge-card p {
+            font-size: 1rem;
+            line-height: 1.5;
         }
         /* Animations */
         
@@ -235,7 +257,7 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-            .feature-grid {
+            .challenge-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -245,41 +267,53 @@
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo">Wonderful</div>
+            <div class="logo">UCU Code Challenge</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#intro">About</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+                <li><a href="#contact">Join</a></li>
             </ul>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to Wonderful</h1>
-            <p>Discover a world of amazing experiences and innovative solutions designed just for you.</p>
-            <a href="#features" class="cta-button">Get Started</a>
+            <h1>Empower the Next Generation of Tech Innovators</h1>
+            <p>Discover Uganda Christian University's dynamic coding and innovation challenges designed to sharpen skills, foster creativity, and solve real-world problems.</p>
+            <a href="#challenges" class="cta-button">Explore Challenges</a>
         </div>
     </section>
 
-    <section id="features" class="section features">
-        <h2>Our Amazing Features</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <i>🚀</i>
-                <h3>Fast & Reliable</h3>
-                <p>Experience lightning-fast performance with our cutting-edge technology.</p>
+    <section id="intro" class="section intro">
+        <h2>Coding and Innovation at UCU</h2>
+        <p>Uganda Christian University (UCU) is at the forefront of nurturing technological talent through hands-on coding challenges. With a strong emphasis on computing and technology programs, UCU provides students with opportunities to tackle real-world
+            issues using programming, AI, and software engineering skills. These initiatives foster creativity, teamwork, and entrepreneurial spirit.</p>
+    </section>
+
+    <section id="challenges" class="section challenges">
+        <h2>Featured Challenges & Achievements</h2>
+        <div class="challenge-grid">
+            <div class="challenge-card">
+                <i>💡</i>
+                <h3>UCU Students' Innovation Challenge 2025</h3>
+                <p>Organized by the UCU Directorate of Research and Graduate Training, this competition invites students to develop innovative projects addressing societal issues with coding solutions. Up to 10 winning teams receive funding and support to
+                    prototype their ideas.</p>
             </div>
-            <div class="feature-card">
-                <i>🎨</i>
-                <h3>Beautiful Design</h3>
-                <p>Stunning visuals that captivate and engage your audience effortlessly.</p>
+            <div class="challenge-card">
+                <i>🏆</i>
+                <h3>Triumph at National Agri-Tech Hackathon</h3>
+                <p>UCU student Charles Muganga led a team to victory with an AI-driven soil testing kit for farmers. Their solution earned the Best Pitch award, highlighting UCU's excellence in hackathon coding challenges.</p>
             </div>
-            <div class="feature-card">
-                <i>🔒</i>
-                <h3>Secure & Safe</h3>
-                <p>Your data is protected with state-of-the-art security measures.</p>
+            <div class="challenge-card">
+                <i>🤝</i>
+                <h3>Software Engineering UCU Chapter</h3>
+                <p>A student-led group offering project-based learning in coding, data analytics, and robot building. Join for workshops, networking, and real industry simulations.</p>
+            </div>
+            <div class="challenge-card">
+                <i>👥</i>
+                <h3>Code Buddy Mentorship Program</h3>
+                <p>Peer-to-peer guidance for first-year computing students, bridging the gap in subjects like Discrete Mathematics to build a strong coding foundation.</p>
             </div>
         </div>
     </section>
@@ -305,7 +339,7 @@
             }
         });
 
-        // Parallax effect on hero (simple version)
+        // Parallax effect on hero
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
@@ -313,7 +347,7 @@
             hero.style.transform = `translateY(${rate}px)`;
         });
 
-        // Animate feature cards on scroll
+        // Animate challenge cards on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -328,7 +362,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.feature-card').forEach(card => {
+        document.querySelectorAll('.challenge-card').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
